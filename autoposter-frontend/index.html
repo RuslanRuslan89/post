@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoPost | Братва в эфире</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
 
+  <header class="navbar glass">
+    <div class="container">
+      <h1>AutoPost<span class="accent">.ru</span></h1>
+      <button id="themeToggle" class="btn-icon" aria-label="Сменить тему">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Пиши один раз —<br><span class="highlight">братва увидит везде</span></h2>
+      <p>Автопостинг в Telegram, ВК, Одноклассники и другие сети без заморочек.</p>
+    </section>
+
+    <!-- Подключение аккаунтов -->
+    <section class="cards">
+      <div class="card glass" data-platform="vk">
+        <img src="assets/icons/vk.svg" alt="ВКонтакте">
+        <h3>ВКонтакте</h3>
+        <button class="btn connect-btn">Подключить</button>
+      </div>
+      <div class="card glass" data-platform="tg">
+        <img src="assets/icons/telegram.svg" alt="Telegram">
+        <h3>Telegram</h3>
+        <button class="btn connect-btn">Подключить</button>
+      </div>
+      <div class="card glass" data-platform="ok">
+        <img src="assets/icons/ok.svg" alt="Одноклассники">
+        <h3>Одноклассники</h3>
+        <button class="btn connect-btn">Подключить</button>
+      </div>
+    </section>
+
+    <!-- Редактор поста -->
+    <section class="editor glass">
+      <h3>Твой пост для братвы</h3>
+      <textarea id="postText" placeholder="Братики, сегодня эфир 🔥..."></textarea>
+      
+      <div class="platform-selector">
+        <label><input type="checkbox" value="vk"> ВК</label>
+        <label><input type="checkbox" value="tg"> TG</label>
+        <label><input type="checkbox" value="ok"> OK</label>
+      </div>
+
+      <button id="sendBtn" class="btn btn-primary">Отправить братве 🚀</button>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
